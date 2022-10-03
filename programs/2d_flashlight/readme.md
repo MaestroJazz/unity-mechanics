@@ -5,4 +5,4 @@
 * Performed transation, scaling & rotation of some of the objects
 
 ## Screenshot
-[[screenshot.png|Screenshot]]
+[[https://github.com/MaestroJazz/unity-mechanics/blob/main/programs/2d_flashlight/screenshot.png|alt=Screenshot]]
