@@ -1,0 +1,10 @@
+
+**/.vsconfig
+**/.vs/**
+
+**/Library/**
+**/Temp/**
+**/test.app/**
+**/Logs/**
+**/obj
+**/packages
