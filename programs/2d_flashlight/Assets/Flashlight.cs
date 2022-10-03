@@ -12,22 +12,16 @@ public class Flashlight : MonoBehaviour
     private float startingAngle;
     public Camera camera;
 
-    Light lt;
-
     // Start is called before the first frame update
     void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        
-        lt.color = Color.yellow;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //lt.color = Color.yellow;
-
         Vector3 targetPosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
         SetAimDirection(targetPosition);
