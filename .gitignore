@@ -10,3 +10,5 @@
 **/packages
 **/.DS_Store/**
 
+**/Build.app/**
+**/TestProject/**
