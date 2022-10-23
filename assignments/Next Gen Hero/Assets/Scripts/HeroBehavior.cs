@@ -42,7 +42,7 @@ public class HeroBehavior : MonoBehaviour
         }
         else
         {
-            speed += Input.GetAxis("Vertical") / 60;
+            speed += Input.GetAxis("Vertical");
 
             transform.position += transform.up * speed * Time.smoothDeltaTime;
         }
