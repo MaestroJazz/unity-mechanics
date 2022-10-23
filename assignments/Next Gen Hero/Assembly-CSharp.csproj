@@ -57,13 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/FireIndicatorBehavior.cs" />
+    <Compile Include="Assets/Scripts/WayPointBarrierBehavior.cs" />
+    <Compile Include="Assets/Scripts/WayPointInfo.cs" />
     <Compile Include="Assets/Scripts/WayPointBehavior.cs" />
     <Compile Include="Assets/Scripts/EnemyBehavior.cs" />
     <Compile Include="Assets/Scripts/EggBehavior.cs" />
     <Compile Include="Assets/Scripts/HeroBehavior.cs" />
-    <Compile Include="Assets/Scripts/WayPointBarrierBehavior.cs" />
-    <Compile Include="Assets/Scripts/WayPointInfo.cs" />
-    <Compile Include="Assets/Scripts/FireIndicatorBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

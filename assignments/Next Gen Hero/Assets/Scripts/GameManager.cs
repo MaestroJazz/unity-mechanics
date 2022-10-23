@@ -401,9 +401,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (var wayPointInfo in wayPointInfos)
         {
-            var color =  wayPointInfo.wayPoint.GetComponent<Renderer>().material.color;
-            color.a = wayPointsVisible ? 1.0f : 0.0f;
-            wayPointInfo.wayPoint.GetComponent<Renderer>().material.color = color;
+            wayPointInfo.wayPoint.SetActive(wayPointsVisible);
         }
     }
 

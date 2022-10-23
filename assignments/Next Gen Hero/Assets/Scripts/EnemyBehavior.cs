@@ -27,11 +27,6 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.IsObjectWithinWorldBounds(GetComponent<Renderer>().bounds))
-        {
-            NewDirection();
-        }
-
         var pointingObject = GameManager.Instance.GetWayPoint(pointingWayPointIndex);
         PointAtPosition(pointingObject.transform.position, rate * Time.smoothDeltaTime);
 
@@ -96,13 +91,6 @@ public class EnemyBehavior : MonoBehaviour
     void OnApplicationQuit()
     {
         Destroy(gameObject);
-    }
-
-    // New direction will be something completely random!
-    private void NewDirection()
-    {
-        Vector2 v = Random.insideUnitCircle;
-        transform.up = new Vector3(v.x, v.y, 0.0f);
     }
 
     private void PointAtPosition(Vector3 p, float r)
