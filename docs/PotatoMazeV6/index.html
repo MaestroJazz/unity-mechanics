@@ -1,12 +1,801 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>CSS-385 Unity Game Project</title>
-      </head>
-      <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-        <h1>CSS-385 Unity Game Project</h1>
-        <a href="game.html">Play the game here</a>
-      </body> 
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CSS-385 Unity Game Project</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <div class="container">
+
+        <h1>POTATO MAZE</h1>
+        <h2>CSS-385 Unity Game Project</h2>
+
+        <div class="text-start">
+
+            <h3>DESCRIPTION</h3>
+
+            <p>This game was inspired by the classic Flash game <i>World's Hardest Game</i>. That game was deceptively
+                simple—which
+                was aimed to mimic. You simply navigate the square character to the endzone and collect all the coins
+                without touching the circles. However, the game’s proportions made each level difficult due to speed,
+                size,
+                and direction of the obstacles. We aimed to copy this idea but add another challenge: movement
+                manipulation.
+            </p>
+
+            <p>
+                Our game requires the player to move the player sprite, a potato in the shape of a circle, through the
+                level
+                and grab all the collectibles and reach the flag without hitting any of the saws, spikes or other
+                obstacles.
+                The twist in our game is that each collectible slows the player down by a percentage amount. This means
+                that
+                players must not only dodge the obstacles skillfully, they must also decide which order to attain the
+                collectibles within the level. For example, if there are two collectibles, one in the middle of multiple
+                obstacles and another in the open, we want the player to realize that the open one is a free
+                collectible. It
+                is meant to be collected after the collectible in the middle. This is because the collectible in the
+                middle
+                can only be collected if the player is moving fast. If they collect the free collectible, the player may
+                be
+                too slow to navigate through the obstacles and collect that second collectible.
+            </p>
+
+            <p>
+                By employing this movement manipulation, we were able to challenge the player in multiple categories:
+                skill,
+                patience, persistence, and strategy. Skill of the game is required to beat all the levels—there is no
+                avoiding that. Patience is tested on levels that have small gaps of escape and the player must wait to
+                have
+                those gaps open for them. Persistence is also tested in our game as users will fail on levels multiple
+                times
+                and will keep trying. Strategy is tested via the speed manipulation of the collectibles, as previously
+                mentioned, and its impact on the players route through the levels.
+            </p>
+
+            <p>
+                We aimed at creating a simple yet addictive game that players will try to beat in one sitting. This is
+                achieved by orienting the game as a simple game that looks easy. Once the player starts playing the game
+                and
+                failing the levels, they motivate themselves that they ‘barely failed’. These small excuses keep the
+                player
+                challenged and now they feel the need to beat that level. Once they beat the level they were stuck on,
+                the
+                new level provides a surprise that jogs their curiosity—and they want to beat this level too. This cycle
+                repeats per level until they have eventually beaten all levels.
+            </p>
+
+            <p>
+                We did not gear this game to be a specimen that the player returns to after completing all levels—as
+                there is
+                going to be no change in the content when they come back. However, to accomplish that, we can add
+                leaderboards per level that show the minimum deaths and time of all tries that occurred on that level.
+                This
+                can be a source of entertainment among the players and result in all of them coming back to beat each
+                other’s scores.
+            </p>
+
+            <p>
+                In conclusion, we had intended on creating a game based on the classic flash game <i>World's Hardest
+                    Game</i> with a
+                twist in speed manipulation. This game is intended to be deceptively simple, and addictive and we
+                believe we
+                managed to achieve those goals. We can further enhance our game with leaderboards for least deaths and
+                time
+                per level to drive a competitive aspect in our game.
+            </p>
+
+            <hr />
+            <h3>DEVELOPMENT LOG</h3>
+
+            <table class="table table-light table-striped shadow-lg">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" style="width: 10%">Date</th>
+                        <th scope="col" style="width: 15%">Completions</th>
+                        <th scope="col" style="width: 15%">Tasks</th>
+                        <th scope="col" style="width: 15%">Next Steps</th>
+                        <th scope="col" style="width: 15%">Playtest</th>
+                        <th scope="col" style="width: 15%">Obstacles</th>
+                        <th scope="col" style="width: 15%">Reflection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">10/17/22</th>
+                        <td>
+                            Agreed upon 2D top-down potato themed shooter game
+                        </td>
+                        <td>
+                            <p>Affan: Physics and Mechanics</p>
+                            <p>Bryan: Upgrades</p>
+                            <p>Tejas: Levels</p>
+                            <p>Skylar: Fun aspect</p>
+                        </td>
+                        <td>
+                            Create timeline of when to complete tasks.
+                            Delegate tasks to members
+                        </td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>
+                            We felt that the idea was unique and had a game on hand for inspiration. After class,
+                            however, we realized that our idea was the same as many other groups’
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            10/19/22
+                        </th>
+                        <td>
+                            Changed idea to cooking simulator
+                        </td>
+                        <td>
+                            Affan: Upgrades and shop
+                            Bryan: Station tasks
+                            Tejas: Rating algorithm
+                            Skylar: Game progression
+
+                        </td>
+                        <td>
+                            Decide if we want to continue task.
+                            Create timeline of when to complete tasks.
+                            Delegate tasks to members
+
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            An impulsive idea that erupted due to the need for a more unique idea. We were not
+                            completely sure if we wanted to stick to the idea
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            10/24/22
+                        </th>
+                        <td>
+                            Changed idea to Potato Maze
+                        </td>
+                        <td>
+                            Affan: Enemy movement
+                            Bryan: Game reset
+                            Tejas: Slowing effects of potatoes
+                            Skylar: Player movement and UI
+
+                        </td>
+                        <td>
+                            Need to code all delegated portions
+                        </td>
+                        <td>
+                            Game in parts at the moment. Playtest not possible
+                        </td>
+                        <td>
+                            Game concept seems too simple. Need more levels
+                        </td>
+                        <td>
+                            Changed our idea once more to the potato maze, based off of Worlds Hardest Game. Simple game
+                            with challenge element to hook player
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            10/30/22
+                        </th>
+                        <td>
+                            Finished all coding tasks
+                        </td>
+                        <td>
+                            Affan: Enemy movement
+                            Bryan: Game reset
+                            Tejas: Slowing effects of potatoes
+                            Skylar: Player movement and UI
+
+                        </td>
+                        <td>
+                            Need to combine all portions to create a version 1
+                        </td>
+                        <td>
+                            Have yet to combine the concepts
+                        </td>
+                        <td>
+                            Additional levels, enemies, and challenging algorithms.
+                        </td>
+                        <td>
+                            Coding was simple for each prototype as we simply relied on previous projects. Will
+                            definitely want to add some advanced concepts.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            10/31/22
+                        </th>
+                        <td>
+                            Created slides for presentation
+                        </td>
+                        <td>
+                            All team members: created their own slides and demonstrated respective prototype
+                        </td>
+                        <td>
+                            Need to get github repos for all concepts
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            Creating slides was mostly asynchronous actions where a deadline was recognized and all
+                            members worked on their own time to fill in their information.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            11/2/22
+                        </th>
+                        <td>
+                            Designed new sprites
+                        </td>
+                        <td>
+                            Affan: Designed sprites for main character. Designed sprites for collectibles
+                            Bryan: Designed sprite for gunner
+
+                        </td>
+                        <td>
+                            Implemented sprites and create code for gunner
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            New sprites made the game feel better to play and more obvious hitboxes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            11/7/22
+                        </th>
+                        <td>
+                            More levels added
+                        </td>
+                        <td>
+                            Affan: Added lvl 5,
+                            Tejas: Added lvl 1 and 2
+                            Bryan: Added lvl 3
+                            Skylar: Added lvl 4
+
+                        </td>
+                        <td>
+                            Need to make sure all levels are beatable and link to each other
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            All levels have different proportions with no unified measures
+                        </td>
+                        <td>
+                            Levels are properly difficult and keep the player challenged and engaged.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            11/14/22
+                        </th>
+                        <td>
+                            Levels upgraded, waypoints implemented, Tile map created
+                        </td>
+                        <td>
+                            Affan: Created tilemap and waypoints for level
+                            Tejas: Revamped own levels and made them more interesting
+                            Bryan: Made gunners shoot
+                            Skyler: Revamped own level and made interesting
+
+                        </td>
+                        <td>
+                            Connect all levels and unify on a design. Need to implement tile map in all levels
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            Tile Map is proving to be difficult as it’s implementation is dependent on the screen aspect
+                            ratio
+                        </td>
+                        <td>
+                            More challenges for the player to avoid. Levels seem to have a gradual difficulty increase.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            11/21/22
+                        </th>
+                        <td>
+                            Made movements more clear, made game playtest-ready
+                        </td>
+                        <td>
+                            All: Tested game mechanics to get it playtest-ready
+                        </td>
+                        <td>
+                            Add more levels and implement playtest feedback
+
+
+                        </td>
+                        <td>
+                            Hitboxes were too aggressive. Tilemap was distracting. Challenge was present in the later
+                            levels but the earlier ones were boring—too slow
+                        </td>
+                        <td>
+                            Had to find a way to make levels difficult but not impossible. Also needed the potato slow
+                            to be present but not enough to be boring
+                        </td>
+                        <td>
+                            Playtest proved that our game was definitely addictive. We also noticed that players would
+                            usually give feedback at a certain point in one level—hinting there was a dull spot in that
+                            level
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            11/28/22
+                        </th>
+                        <td>
+                            Added more levels, removed tile map. Made the game harder. Implemented new types of
+                            challenges
+                        </td>
+                        <td>
+                            Affan: Added 3 levels
+                            Tejas: Added 2 levels
+                            Brian: Added 2 levels with new mechanics
+                            Skyler: Added 2 levels
+
+                        </td>
+                        <td>
+                            Resolve github clashes. Add more levels, make a death counter, possible timer?
+                        </td>
+                        <td>
+                            The game was challenging and very addictive. People would keep coming back to retry. Absence
+                            of tilemap made it easier to navigate the game.
+                        </td>
+                        <td>
+                            The merge conflicts corrupted the build file so our waypoints were no longer straight
+                            directions, they were arcs and made some levels close to impossible.
+                        </td>
+                        <td>
+                            This playtest provided a lot of insight of how we were capable of trapping the player to
+                            play our game. We had individuals play our game for 10-20 minutes straight—some on the same
+                            level for a long time. We had achieved our goal of making the game challengingly fun. The
+                            arcing waypoints were a sore point as we were also incapable of beating those corrupted
+                            levels
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            12/5/22
+                        </th>
+                        <td>
+                            Fixed all bugs. Finalized game. Added death counter.
+                        </td>
+                        <td>
+                            Affan: Fixed waypoints error
+                            Brian: Added death counter
+                            Skyler: Revamped levels. Made level no longer boring
+                            Tejas: Resolved github conflicts
+
+                        </td>
+                        <td>
+                            Create a presentation. Maybe add death animation.
+                        </td>
+                        <td>
+                            People were addicted to our game and the game was beatable and enjoyable.
+                        </td>
+                        <td>
+                            We still had to provide some tips on how to beat the levels. We assumed a quicker learning
+                            curve.
+                        </td>
+                        <td>
+                            The playtest was more a psychological test of how certain people responded to our game.
+                            People who never played games found the game merciless. Others, who looked like gamers, knew
+                            the positioning, openings, and tactics well
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <br />
+            <hr />
+            <h3>PLAY TESTING REPORT</h3>
+            <h4>Alpha Playtest</h4>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we had:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Playable game tutorial level</li>
+                                <li>Internet sprites for our characters</li>
+                                <li>Collision detection and level clear</li>
+                                <li>Tile Map</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we found:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>People liked the idea</li>
+                                <li>Left the game too quickly</li>
+                                <ul>
+                                    <li>Not much user addiction</li>
+                                </ul>
+                                <li>Tile map confused users</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What testers recommended:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Collisions were aggressive</li>
+                                <li>Game was easy</li>
+                                <li>Sprites didn&#39;t really fit theme</li>
+                                <li>Potato slowed down too much (made level boring)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h4>Beta Playtest</h4>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we had:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>5 playable levels</li>
+                                <li>Corrupted code (waypoints would cause enemies to arc)</li>
+                                <li>Level clearing sequence</li>
+                                <li>Flags configured so it would spawn only upon collecting all collectibles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we found:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>People played the game much longer</li>
+                                <li>Toggling visibility of flag would surprise users</li>
+                                <li>Although bugged, many players would keep trying to beat the levels</li>
+                                <li>No one passed the game in one sitting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What testers recommended:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Collisions were aggressive</li>
+                                <li>Game was deceptively simple</li>
+                                <li>They could see how to pass every level but didn&#39;t have the skill to do so</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+            <h4>Final Playtest</h4>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we had:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>9 playable levels</li>
+                                <li>Corrected waypoints </li>
+                                <li>Proper level sequence based on difficulty</li>
+                                <li>Adjacent levels would be different from one another to keep player engaged</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we found:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>A lot of players were surprised by certain levels</li>
+                                <li>Players spent around 20-30 minutes on our game</li>
+                                <li>More emotions were displayed</li>
+                                <ul>
+                                    <li>Frustration</li>
+                                    <li>Excitement</li>
+                                    <li>Relief</li>
+                                </ul>
+
+                                <li>One person beat the entire game</li>
+                                <li>We had to verbally give tips on certain levels</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What testers recommended:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>One level was unnecessarily slow</li>
+                                <li>The difficulty ramps up perfectly</li>
+                                <li>They liked the surprise, challenge, and simplicity of the game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <h4>Final presentation</h4>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we had:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Finished version of the Potato Maze Game</li>
+                                <li>Presented our game in front of class</li>
+                                <li>Displayed a walkthrough of our game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What we found:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Many people wanted to play our game for the final time</li>
+                                <li>A lot of addiction to the game</li>
+                                <li>Many people forgot how to beat the game via our walkthrough</li>
+                                <li>Another person managed to clear the entire game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-lg rounded text-center h-100">
+                        <div class="card-header">
+                            <h5>What testers recommended:</h5>
+                        </div>
+                        <div class="card-body text-start">
+                            <ul>
+                                <li>Loved the game</li>
+                                <li>Simple design and controls juxtapose the difficulty of the game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+        </div>
+        <h2><a href="game.html">Play the game here</a></h2>
+
+        <br />
+
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IzQ42TraPuM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <div class="text-start">
+            <h3>REFERENCES</h3>
+            <ul>
+                <li>
+                    <a href="https://make8bitart.com/">https://make8bitart.com/</a>
+                    <ul>
+                        <li>
+                            We used this website for the creation of all of our 8-bit drawings including
+                            Potato (player)
+                        </li>
+                        <li>Saws</li>
+                        <li>Collectibles</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a
+                        href="https://www.pngitem.com/middle/mxoRhb_battle-for-dream-island-wiki-spike-ball-png/">https://www.pngitem.com/middle/mxoRhb_battle-for-dream-island-wiki-spike-ball-png/</a>
+                    <ul>
+                        <li>
+                            We used the above picture of the spike balls in our shooters
+                        </li>
+                        <li>
+                            These were the original saws before we replaced them with our own
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Unity software
+                    <ul>
+                        We used the unity software for the development of our entire game
+                    </ul>
+                    <ul>
+                        We also used it for the creation of our wall and waypoints sprites
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Visual Studio Code
+                    <ul>
+                        We used visual studio code to push and pull code from the Github
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Github
+                    <ul>
+                        We stored all project code, sprites, prefabs, scripts, and all other Unity project details on
+                        the
+                        Github
+                    </ul>
+                    <ul>
+                        Github allowed us all access to the code and code asynchronously
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Visual Studio
+                    <ul>
+                        Unity&#39;s default coding environment was Visual Studio and we used this software to edit all
+                        our
+                        scripts </ul>
+                </li>
+            </ul>
+
+        </div>
+        <br />
+        <div class="text-start">
+            <h3>TRAILER</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IzQ42TraPuM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <br />
+        <div class="text-start">
+            <h3>CREDITS</h3>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-3">
+                <div class="card shadow-lg rounded text-center h-100">
+                    <div class="card-header">
+                        <h4 class="card-title">Affan Dhankwala</h4>
+                    </div>
+                    <div class="card-body text-start">
+                        <b>Role:</b> Level design for waypoints, design of sprites, and
+                        documentation of development log</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Contact information:</b> mdhank@uw.edu
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card shadow-lg rounded text-center h-100">
+                    <div class="card-header">
+                        <h4 class="card-title">Brian Ying</h4>
+                    </div>
+                    <div class="card-body text-start">
+                        <b>Role:</b> Level design for shooting levels and path-oriented levels; documented playtest
+                        results</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Contact information:</b> two135@uw.edu
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card shadow-lg rounded text-center h-100">
+                    <div class="card-header">
+                        <h4 class="card-title">Skyler Nickel</h4>
+                    </div>
+                    <div class="card-body text-start">
+                        <b>Role:</b> Level design for obstacles levels, home screen, and end screen</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Contact information:</b> skylern@uw.edu
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card shadow-lg rounded text-center h-100">
+                    <div class="card-header">
+                        <h4 class="card-title">Tejas Kalyan</h4>
+                    </div>
+                    <div class="card-body text-start">
+                        <b>Role:</b> Level design for tutorial, management of Github Protocols, and playtest presenter
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <b>Contact information:</b> tkalyan@uw.edu
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="text-start">
+            <h3>SOURCECODE</h3>
+            <a href="https://github.com/MaestroJazz/PotatoMaze-Main">https://github.com/MaestroJazz/PotatoMaze-Main</a>
+        </div>
+        <br />
+        <br />
+
+
+        <iframe
+            src='https://view.officeapps.live.com/op/embed.aspx?src=https://maestrojazz.github.io/unity-mechanics/docs/PotatoMazeV6/Postmortem.pptx'
+            width='100%' height='600px' frameborder='0'></iframe>
+
+        <br />
+        <br />
+    </div>
+
+</body>
+
 </html>
